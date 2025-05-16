@@ -24,4 +24,33 @@ const services = document.querySelectorAll('.service');
       menu.classList.toggle('active');
     });
 
-    
+    document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('form-contato');
+  const sucesso = document.getElementById('mensagem-sucesso');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault(); // Evita sair da página
+
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+      method: form.method,
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        form.reset();
+        sucesso.style.display = 'block';
+        setTimeout(() => {
+          sucesso.style.display = 'none';
+        }, 5000);
+      } else {
+        alert('Erro ao enviar. Tente novamente.');
+      }
+    }).catch(error => {
+      alert('Erro ao enviar. Tente novamente.');
+    });
+  });
+});

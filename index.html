@@ -69,14 +69,14 @@
 
   <section id="contato" class="contact">
     <h2>Fale Conosco</h2>
-    <form class="contact-form" action="https://formsubmit.co/joaovitorleonardo36@gmail.com" method="POST">
-      <input type="hidden" name="_next" value="https://seusite.com/obrigado.html">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="text" name="nome" placeholder="Seu nome" required />
-      <input type="email" name="email" placeholder="Seu e-mail" required />
-      <input type="tel" name="telefone" placeholder="Seu telefone" />
-      <textarea name="mensagem" rows="5" placeholder="Sua mensagem" required></textarea>
-      <button type="submit">Enviar Mensagem</button>
+    <form class="contact-form" id="form-contato" action="https://formsubmit.co/joaovitorleonardo36@gmail.com" method="POST">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="text" name="nome" placeholder="Seu nome" required />
+    <input type="email" name="email" placeholder="Seu e-mail" required />
+    <input type="tel" name="telefone" placeholder="Seu telefone" />
+    <textarea name="mensagem" rows="5" placeholder="Sua mensagem" required></textarea>
+    <button type="submit">Enviar Mensagem</button>
+    <p id="mensagem-sucesso" style="display:none; color: #4caf50; font-weight: bold;">Mensagem enviada com sucesso!</p>
     </form>
 
     <div class="social">
@@ -87,6 +87,8 @@
   </section>
 
   <footer>
+    <span>Av. Senador Vergueiro, 3451 - Anchieta</span>
+    <span>(11) 98472-8517</span>
     <p>&copy; 2025 Garagem 347. Todos os direitos reservados.</p>
   </footer>
   <script src="./script.js"></script>
