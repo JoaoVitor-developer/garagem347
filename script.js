@@ -1,4 +1,4 @@
- const services = document.querySelectorAll('.service');
+const services = document.querySelectorAll('.service');
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -16,3 +16,12 @@
       service.style.transition = 'all 0.6s ease-out';
       observer.observe(service);
     });
+
+    // Toggle menu mobile
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+
+    
